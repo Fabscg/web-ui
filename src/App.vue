@@ -1,24 +1,18 @@
 <template>
-   <div>
-      <navigation></navigation>
+  <div id="app">
+    <TheNavigation/>
+    <RouterView />
   </div>
 </template>
 <script>
-import Navigation from './components/Navigation..vue'
-import About from './components/About.vue'
-
-
+import TheNavigation from '@/components/TheNavigation.vue'
+import { RouterView, RouterLink } from 'vue-router'
+import router from '@/router'
 
 export default {
   name: 'app',
   components: {
-    Navigation,
-    About,
-  },
-  data() {
-    return {
-      
-    }
+    TheNavigation
   }
 }
 </script>
