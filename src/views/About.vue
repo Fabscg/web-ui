@@ -1,14 +1,18 @@
 <template>
-  <div class="about content-center text-white h-screen flex items-center justify-center  px-10 py-5">
-    <div class="lg:flex block content-center w-full text-white p-15">
-      <img
+  <div class="about content-center text-white flex justify-center grid">
+    <the-navigation></the-navigation>
+    <div class="lg:flex block object-center grid">
+      <div class=" w-full text-white p-15">
+        <img
         src="../assets/images/myself.jpeg"
         alt="profile"
-        class="myself text-center sm:h-full px-10 py-5"
+        class="myself text-center sm:h-full"
       />
-       <div class="about-myself bg-black bg-opacity-50 w-full rounded-none sm:rounded-full sm:h-full h-screen items-center justify-center">
+      </div>
+     
+       <div class="container bg-black bg-opacity-50 w-[500px] h-[500px] justify-center hover:animate-bounce">
         <h1 class="text-center w3-jumbo font-cursive font-display">I am Fabi</h1>
-          <p class="text-center p-5 font-sans">
+          <p class="text-center px-5 font-sans w-[500px] content-center h-fit">
             People find me to be an upbeat self-motivated team player with excellent
             communication skills. For the past several years, I have worked in
             customer service and hospitality, and have also spearheaded my own
@@ -33,16 +37,14 @@ export default {
 </script>
 <style>
 .myself{
-  width:auto;
+  width:500px;
   height:500px;
   object-fit: cover;
   border-radius: 100px 0 0 100px;
 }
-.about-myself{
+.container{
   border-radius: 0 100px 100px 0;
-  width: auto;
-  height: 500px;
-  object-fit: cover;
+  align-items:center;
   /* background: linear-gradient(
     90deg,
     rgba(131, 58, 180, 1) 0%,
