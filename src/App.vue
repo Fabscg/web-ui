@@ -1,20 +1,25 @@
 <template>
   <div id="app">
     <TheNavigation/>
+    <div class="p-8 lg:pl-[200px]">
     <RouterView />
-    <Footer />
+    </div>
+    <div class="sticky bottom-0 left-0">
+      <Footer />
+    </div>
   </div>
 </template>
 <script>
 import TheNavigation from '@/components/TheNavigation.vue'
 import { RouterView, RouterLink } from 'vue-router'
 import router from '@/router'
-import Footer from '@/views/Footer.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'app',
   components: {
-    TheNavigation
+    TheNavigation,
+    Footer
   }
 }
 </script>

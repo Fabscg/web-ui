@@ -1,7 +1,7 @@
 <template>
-  <div class="about content-center text-white flex justify-center grid">
+  <div class="about justify-center content-center grid my-12 my-8">
     <the-navigation></the-navigation>
-    <div class="lg:flex block object-center grid">
+    <div class="lg:flex block object-center max-w-fit text-white flex">
       <div class=" w-full text-white p-15">
         <img
         src="../assets/images/myself.jpeg"
@@ -10,9 +10,9 @@
       />
       </div>
      
-       <div class="container bg-black bg-opacity-50 w-[500px] h-[500px] justify-center hover:animate-bounce">
+       <div class="container bg-black bg-opacity-50 w-[400px] h-[400px] justify-center">
         <h1 class="text-center w3-jumbo font-cursive font-display">I am Fabi</h1>
-          <p class="text-center px-5 font-sans w-[500px] content-center h-fit">
+          <p class="text-center backdrop-blur-sm px-8 pb-12 font-sans w-[400px] content-center h-[500px] max-w-auto drop-shadow-md">
             People find me to be an upbeat self-motivated team player with excellent
             communication skills. For the past several years, I have worked in
             customer service and hospitality, and have also spearheaded my own
@@ -37,7 +37,7 @@ export default {
 </script>
 <style>
 .myself{
-  width:500px;
+  width:400px;
   height:500px;
   object-fit: cover;
   border-radius: 100px 0 0 100px;

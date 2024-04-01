@@ -1,22 +1,22 @@
 <template>
-  <nav class="w3-sidebar w3-bar-block w3-hide-medium w3-hide-small w3-center align-center bg-black" style="z-index:2" id="mySidebar">
+  <nav class="w3-sidebar w3-bar-block w3-hide-medium w3-hide-small w3-right align-center bg-black" style="z-index:2" id="mySidebar">
       <img src="../assets/images/profile.jpeg" alt="profile" class="w3-image" style="width:100%;"/>
-      <div class="block">
+      <div class="grid grid-rows-2">
         <router-link class="item-link w3-bar-item w3-button w3-padding-large w3-hover-black font-mono" to="/">Home
-        <font-awesome-icon color="white" :icon="['fas', 'house']" /></router-link>
+        <font-awesome-icon class="float-right" color="white" :icon="['fas', 'house']" /></router-link>
         <router-link class="item-link w3-bar-item w3-button w3-padding-large w3-hover-black font-mono" to="/about">About
-        <font-awesome-icon color="white"  :icon="['fas', 'user']" /></router-link>
+        <font-awesome-icon class="float-right" color="white"  :icon="['fas', 'user']" /></router-link>
         <router-link class="item-link w3-bar-item w3-button w3-padding-large w3-hover-black font-mono" to="/projects">Projects
-        <font-awesome-icon color="white"  :icon="['fas', 'briefcase']" /></router-link>
+        <font-awesome-icon class="float-right" color="white"  :icon="['fas', 'briefcase']" /></router-link>
         <router-link class="item-link w3-bar-item w3-button w3-padding-large w3-hover-black font-mono" to="/skills">Skills
-        <font-awesome-icon color="white" :icon="['fas', 'screwdriver-wrench']" /></router-link>
+        <font-awesome-icon class="float-right" color="white" :icon="['fas', 'screwdriver-wrench']" /></router-link>
       </div>
    </nav>
      <div class="w3-top w3-hide-large fixed top-0 bg-black bg-opacity-85">
-        <router-link class="w3-bar-item w3-button font-mono" style="width: 25%;" to="/">Home</router-link>
-        <router-link class="w3-bar-item w3-button font-mono" style="width: 25%;" to="/about">About</router-link>
-        <router-link class="w3-bar-item w3-button font-mono" style="width: 25%;" to="/projects">Projects</router-link>
-        <router-link class="w3-bar-item w3-button font-mono" style="width: 25%;" to="/skills">Skills</router-link>
+        <router-link class="w3-bar-item w3-button font-mono" style="width:25%;" to="/">Home</router-link>
+        <router-link class="w3-bar-item w3-button font-mono" style="width:25%;" to="/about">About</router-link>
+        <router-link class="w3-bar-item w3-button font-mono" style="width:25%;" to="/projects">Projects</router-link>
+        <router-link class="w3-bar-item w3-button font-mono" style="width:25%;" to="/skills">Skills</router-link>
       </div>
        <header class="bg-black text-white">
       <div to="/" class="text-center w3-padding-large z-40" id="home">
@@ -54,6 +54,7 @@ export default {
 <style>
 .item-link{
   display:block;
+  justify-content: space-evenly!important;
 }
 nav {
   list-style-type: none;

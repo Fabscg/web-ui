@@ -1,11 +1,11 @@
 <template>
-  <div class="md:columns-2 lg:columns-3">
+  <div class="md:columns-2 lg:columns-3 text-center bg-white bg-opacity-50">
     <div
       :key="project.id"
       v-for="project in projects"
-      class="w3-margin-bottom p-14"
+      class="w3-margin-bottom inline-block lg:p-8 my-4 p-2 py-8"
     >
-    <a :href="project.URL"> <img
+    <a :href="project.URL"><img
         :src="`src/assets/images/${project.image}`"
         alt="project.title"
         style="width: 100%"
@@ -21,8 +21,11 @@
           </div>
         </div>
         <div class="sm:text-base text-sm text-base-7">
-          <p>{{ project.description }}</p>
-        </div>
+          <p>{{ formattedBody }}</p>
+          <button @click="showingFullText = !showingFullText">
+            Read {{ showingFullText ? "More" : "More" }}
+          </button>
+          </div>
       </div>
     </div>
   </div>
@@ -33,18 +36,19 @@ export default {
   data() {
     return {
       projects: sourceData.projects,
+      showingFullText: false,
+      description: ""
     };
   },
-  computed: {},
-  methods: {
-    truncateDescription() {
-      const string= this.projects.description
-      const maxLength = 20
-      const truncatedStr = string.length>maxLength ? str.substring(0, maxLength) + "Read more..." : string
-      console.log(truncatedStr);   
+    computed: {
+    formattedBody() {
+      if (this.showingFullText) {
+        return this.description;
+      }
 
-    },
-  },
+      return `${this.description.slice(0, 20).trim()}...`;
+    }
+  }
 };
 </script>
 <style>
