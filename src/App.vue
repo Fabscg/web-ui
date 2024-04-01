@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <TheNavigation/>
-    <div class="p-8 lg:pl-[200px]">
+    <div class="py-12 lg:pl-[200px] text-center">
     <RouterView />
     </div>
     <div class="sticky bottom-0 left-0">
