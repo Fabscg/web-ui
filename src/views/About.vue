@@ -10,9 +10,9 @@
       />
       </div>
      
-       <div class="container bg-black bg-opacity-50 w-[400px] h-[400px] justify-center">
+       <div class="container bg-black bg-opacity-50 w-[400px] h-full justify-center">
         <h1 class="text-center w3-jumbo font-cursive font-display">I am Fabi</h1>
-          <p class="text-center backdrop-blur-sm px-8 pb-12 font-sans w-[400px] content-center h-[500px] max-w-auto drop-shadow-md">
+          <p class="text-center backdrop-blur-sm px-8 pb-12 font-sans w-[400px] content-center h-full max-w-auto drop-shadow-md">
             People find me to be an upbeat self-motivated team player with excellent
             communication skills. For the past several years, I have worked in
             customer service and hospitality, and have also spearheaded my own

@@ -20,7 +20,7 @@
       </a>
       <div class="inline-block">
         <p class="text-slate-400">
-          © Copyrights | Created by <i class="fa fa-terminal"></i> Fabiola C.
+          © Copyrights | Created by <i class="signature fa fa-terminal"></i> Fabiola C.
           2024
         </p>
       </div>
@@ -32,3 +32,6 @@ export default {
   name: "Footer",
 };
 </script>
+<style>
+
+</style>
