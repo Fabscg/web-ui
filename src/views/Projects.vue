@@ -3,10 +3,10 @@
     <div
       :key="project.id"
       v-for="project in projects"
-      class="w3-margin-bottom"
+      class="w3-margin-bottom pb-[70px]"
     >
     <a :href="project.URL"> <img
-        :src="`src/assets/images/${project.image}`"
+        :src="`/images/${project.image}`"
         alt="project.title"
         style="width: 100%"
         class="image hover:animate-pulse"
