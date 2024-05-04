@@ -3,6 +3,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
+    "/images/**/*.{png,jpg,jpeg,gif,svg}"
   ],
   theme: {
     extend: {

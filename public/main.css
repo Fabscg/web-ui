@@ -1,16 +1,10 @@
 body {
-    background-image: url('./images/laptop.jpeg');
+    background-image: url('/images/laptop.jpeg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     z-index: -2;
 }
-.signature{
-    color:#71ff49 !important;
-  }
-
-
-
 @media screen and (max-width: 600px){
     .icons{
         font-size: 20px !important;

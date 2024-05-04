@@ -6,11 +6,11 @@
       class="w3-margin-bottom pb-[70px]"
     >
     <a :href="project.URL"> <img
-        :src="`/images/${project.image}`"
+        :src="project.image"
         alt="project.title"
         style="width: 100%"
-        class="image hover:animate-pulse"
-      /></a>
+        class="image hover:animate-pulse" />
+        </a>
       <div class="w3-container bg-black bg-opacity-50 text-white">
         <div class="wrap flex bg-black p-2 justify-between">
           <p class="text-left">
