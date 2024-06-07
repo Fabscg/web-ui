@@ -2,7 +2,7 @@
     "projects": [
         {
             "id": 1,
-            "image": "drum-kit.png",
+            "image": "./src/assets/images/drum-kit.png",
             "title": "Drum Kit",
             "URL": "https://fabscg.github.io/drum-kit/",
             "github": "https://github.com/Fabscg/drum-kit",
@@ -26,12 +26,11 @@
         },
         {
             "id": 4,
-            "image": "mission-possible.png",
-            "title": "Mission: Possible",
-            "URL": "https://glacial-cliffs-90348.herokuapp.com/",
-            "github": "https://github.com/Fabscg/group-3-project",
-            "description": "In this app made with my team mates, we are tryin to enocurage people to help others in need. Being benefactors we anted to make this app that connect to 3 different charities, so people can have an option to donate to any of their choice.  I worked in this project with GraphQL and Front-end, but this project has different dependencies like."
-    
+            "image": "run-buddy.png",
+            "title": "Run Buddy",
+            "URL": "https://fabscg.github.io/run-buddy/",
+            "github": "https://github.com/Fabscg/run-buddy",
+            "description": "Run buddy was a design from my bootcamp. This was one of the first projects that I worked on, and as such, I found it to be a big challenge at the time. It was created for a gym company, and provides information about their trainers and the location, while also allowing people to sign up for newsletters. Languages used here are HTML and CSS style."
         },
         {
             "id": 5,
@@ -43,11 +42,12 @@
         },
         {
             "id": 6,
-            "image": "run-buddy.png",
-            "title": "Run Buddy",
-            "URL": "https://fabscg.github.io/run-buddy/",
-            "github": "https://github.com/Fabscg/run-buddy",
-            "description": "Run buddy was a design from my bootcamp. This was one of the first projects that I worked on, and as such, I found it to be a big challenge at the time. It was created for a gym company, and provides information about their trainers and the location, while also allowing people to sign up for newsletters. Languages used here are HTML and CSS style."
+            "image": "mission-possible.png",
+            "title": "Mission: Possible",
+            "URL": "https://glacial-cliffs-90348.herokuapp.com/",
+            "github": "https://github.com/Fabscg/group-3-project",
+            "description": "In this app made with my team mates, we are tryin to enocurage people to help others in need. Being benefactors we anted to make this app that connect to 3 different charities, so people can have an option to donate to any of their choice.  I worked in this project with GraphQL and Front-end, but this project has different dependencies like."
+    
         },
         {
             "id": 7,
