@@ -1,26 +1,19 @@
 <template>
-  <div class="inline-block snap-x snap-normal snap-center w-[500px]">
-    <div
-      :key="project.id"
-      v-for="project in projects"
-      class="w3-margin-bottom pb-[70px]"
-    >
-    <a :href="project.URL"> <img
-        :src="`src/assets/images/${project.image}`"
-        alt="project.title"
-        style="width: 100%"
-        class="image hover:animate-pulse" />
-        </a>
+  <div id="your-container-id">
+    <div v-for="project in projects" :key="project.id" class="item">
+      <a :href="project.URL">
+        <img :src="project.imageUrl" :alt="project.title" style="width: 100%" class="image hover:animate-pulse" />
+      </a>
       <div class="w3-container bg-black bg-opacity-50 text-white">
         <div class="wrap flex bg-black p-2 justify-between">
-          <p class="text-left">
+          <div class="text-left">
             <b>{{ project.title }}</b>
-          </p>
+          </div>
           <div class="justify-end">
-            <a :href="project.github"><i class="fa fa-github fa-2x hover:bg-gray-400 rounded p-1"></i></a>
+            <a :href="project.github" class="fa fa-github fa-2x" target="_blank"></a>
           </div>
         </div>
-        <div class="sm:text-base text-sm text-base-7 backdrop-blur-md">
+        <div class="text-base text-sm text-base-2 backdrop-blur-md blur-sm backdrop-blur-sm bg-gray-500 bg-opacity-50 text-black p-2">
           <p class="p-2">{{ project.description }}</p>
           <button icon="arrow_down" class="rounded bg-white"></button>
         </div>
@@ -28,22 +21,34 @@
     </div>
   </div>
 </template>
+
 <script>
-import sourceData from "@/data.json";
+import sourceData from '@/data.json';
+
 export default {
   data() {
     return {
-      projects: sourceData.projects,
+      projects: sourceData.projects
     };
   },
+  mounted() {
+    fetch('path/to/data.json')
+      .then(response => response.json())
+      .then(data => {
+        this.projects = data.projects;
+      })
+      .catch(error => console.error('Error fetching data:', error));
+  }
 };
 </script>
-<style>
-.w3-container {
-  padding: 20px !important;
-  border-radius: 10px;
+
+<style scoped>
+/* Add your styles here */
+.item {
+  margin-bottom: 20px;
 }
-.image{
-  box-shadow: 0px 0px 10px 10px rgba(241, 237, 237, 0.75);
+img {
+  width: 100%;
+  max-width: 300px;
 }
 </style>

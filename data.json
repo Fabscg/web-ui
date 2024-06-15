@@ -2,7 +2,7 @@
     "projects": [
         {
             "id": 1,
-            "image": "./src/assets/images/drum-kit.png",
+            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/web-portfolio-1bf32.appspot.com/o/images%2Fdrum-kit.png?alt=media&token=e7b8513d-6019-440a-b0de-51f727476d3d",
             "title": "Drum Kit",
             "URL": "https://fabscg.github.io/drum-kit/",
             "github": "https://github.com/Fabscg/drum-kit",
@@ -10,7 +10,7 @@
         },
         {
             "id": 2,
-            "image": "lanterna-restaurant.png",
+            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/web-portfolio-1bf32.appspot.com/o/images%2FLanterna-restaurant.png?alt=media&token=a0914400-5d27-4396-84a6-05320a75517d",
             "title": "Lanterna|Restaurant and Marketplace",
             "URL": "https://lanterna-marketplace-ee30b.web.app",
             "github": "https://github.com/Fabscg/lanterna-marketplace",
@@ -18,7 +18,7 @@
         },
         {
             "id": 3,
-            "image": "artist-and-lyrics-project.png",
+            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/web-portfolio-1bf32.appspot.com/o/images%2Fartist-and-lyrics-project.png?alt=media&token=16770257-f4ca-4563-9ca4-305220c58edd",
             "title": "Artist & Lyrics",
             "URL": "https://chamibia.github.io/lyrics-finder/",
             "github": "https://github.com/Fabscg/lyrics-finder",
@@ -26,15 +26,15 @@
         },
         {
             "id": 4,
-            "image": "run-buddy.png",
+            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/web-portfolio-1bf32.appspot.com/o/images%2Frun-buddy.png?alt=media&token=4a1faf25-e166-4a98-bf89-341819847471",
             "title": "Run Buddy",
             "URL": "https://fabscg.github.io/run-buddy/",
             "github": "https://github.com/Fabscg/run-buddy",
             "description": "Run buddy was a design from my bootcamp. This was one of the first projects that I worked on, and as such, I found it to be a big challenge at the time. It was created for a gym company, and provides information about their trainers and the location, while also allowing people to sign up for newsletters. Languages used here are HTML and CSS style."
         },
-        {
+         {
             "id": 5,
-            "image": "bike-haven.png",
+            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/web-portfolio-1bf32.appspot.com/o/images%2Fbike-haven.png?alt=media&token=0cd6f9b8-c96f-4330-a290-596569cbc98b",
             "title": "Bike Haven",
             "URL": "https://bike-haven.herokuapp.com/",
             "github": "https://github.com/Fabscg/Bike-Haven",
@@ -42,7 +42,7 @@
         },
         {
             "id": 6,
-            "image": "mission-possible.png",
+            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/web-portfolio-1bf32.appspot.com/o/images%2Fmission-possible.png?alt=media&token=d88c1721-168b-4147-94ba-fe66da04afa3",
             "title": "Mission: Possible",
             "URL": "https://glacial-cliffs-90348.herokuapp.com/",
             "github": "https://github.com/Fabscg/group-3-project",
@@ -51,7 +51,7 @@
         },
         {
             "id": 7,
-            "image": "tech-blog-site.png",
+            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/web-portfolio-1bf32.appspot.com/o/images%2Ftech-blog-site.png?alt=media&token=04da1b7f-1892-414b-b7d3-7b2434299a0b",
             "title": "Tech Blog",
             "URL": "https://afternoon-crag-71461.herokuapp.com/login",
             "github": "https://github.com/Fabscg/MVC-challenge-ITblog",
@@ -59,7 +59,7 @@
         },
         {
             "id": 8,
-            "image": "passGenerator.png",
+            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/web-portfolio-1bf32.appspot.com/o/images%2FpassGenerator.png?alt=media&token=6ccd71bc-5252-4789-a0f4-af420faa2f5f",
             "title": "Password Generator",
             "URL": "https://fabscg.github.io/passgenerator/",
             "github": "https://github.com/Fabscg/passgenerator",
