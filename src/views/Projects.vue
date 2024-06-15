@@ -6,7 +6,7 @@
       class="w3-margin-bottom pb-[70px]"
     >
     <a :href="project.URL"> <img
-        :src="`src/assets/images/${project.image}`"
+        :src="project.image"
         alt="project.title"
         style="width: 100%"
         class="image hover:animate-pulse" />
@@ -29,13 +29,27 @@
   </div>
 </template>
 <script>
-import sourceData from "@/data.json";
+import projects from "@/data/projects";
 export default {
   data() {
     return {
-      projects: sourceData.projects,
+      projects
     };
   },
+  methods: {
+    getImageUrl(image) {
+      return require(`/images/${image}`);
+    }
+  },
+  mounted() {
+  fetch('path/to/data.json')
+    .then(response => response.json())
+    .then(data => {
+      this.items = data;
+    })
+    .catch(error => console.error('Error fetching data:', error));
+}
+
 };
 </script>
 <style>
@@ -45,5 +59,11 @@ export default {
 }
 .image{
   box-shadow: 0px 0px 10px 10px rgba(241, 237, 237, 0.75);
+}
+@media screen and (min-width: 768px) {
+  .wrap {
+    padding: 10px;
+  }
+  
 }
 </style>
