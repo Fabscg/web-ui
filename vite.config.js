@@ -5,6 +5,11 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  paths: {
+    "assets/*": [
+      "src/assets/*"
+    ],
+  },
   plugins: [
     vue(),
   ],
@@ -13,4 +18,5 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   }
+  
 })
