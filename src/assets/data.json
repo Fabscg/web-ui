@@ -2,7 +2,7 @@
     "projects": [
         {
             "id": 1,
-            "image": "./src/assets/images/drum-kit.png",
+            "image": "gs://web-portfolio-1bf32.appspot.com/images/drum-kit.png",
             "title": "Drum Kit",
             "URL": "https://fabscg.github.io/drum-kit/",
             "github": "https://github.com/Fabscg/drum-kit",
@@ -10,7 +10,7 @@
         },
         {
             "id": 2,
-            "image": "lanterna-restaurant.png",
+            "image": "gs://web-portfolio-1bf32.appspot.com/images/Lanterna-restaurant.png",
             "title": "Lanterna|Restaurant and Marketplace",
             "URL": "https://lanterna-marketplace-ee30b.web.app",
             "github": "https://github.com/Fabscg/lanterna-marketplace",
@@ -18,7 +18,7 @@
         },
         {
             "id": 3,
-            "image": "artist-and-lyrics-project.png",
+            "image": "gs://web-portfolio-1bf32.appspot.com/images/artist-and-lyrics-project.png",
             "title": "Artist & Lyrics",
             "URL": "https://chamibia.github.io/lyrics-finder/",
             "github": "https://github.com/Fabscg/lyrics-finder",
@@ -26,15 +26,15 @@
         },
         {
             "id": 4,
-            "image": "run-buddy.png",
+            "image": "gs://web-portfolio-1bf32.appspot.com/images/run-buddy.png",
             "title": "Run Buddy",
             "URL": "https://fabscg.github.io/run-buddy/",
             "github": "https://github.com/Fabscg/run-buddy",
             "description": "Run buddy was a design from my bootcamp. This was one of the first projects that I worked on, and as such, I found it to be a big challenge at the time. It was created for a gym company, and provides information about their trainers and the location, while also allowing people to sign up for newsletters. Languages used here are HTML and CSS style."
         },
-        {
+         {
             "id": 5,
-            "image": "bike-haven.png",
+            "image": "gs://web-portfolio-1bf32.appspot.com/images/bike-haven.png",
             "title": "Bike Haven",
             "URL": "https://bike-haven.herokuapp.com/",
             "github": "https://github.com/Fabscg/Bike-Haven",
@@ -42,16 +42,18 @@
         },
         {
             "id": 6,
-            "image": "mission-possible.png",
+            "image": "gs://web-portfolio-1bf32.appspot.com/images/mission-possible.png",
             "title": "Mission: Possible",
             "URL": "https://glacial-cliffs-90348.herokuapp.com/",
             "github": "https://github.com/Fabscg/group-3-project",
             "description": "In this app made with my team mates, we are tryin to enocurage people to help others in need. Being benefactors we anted to make this app that connect to 3 different charities, so people can have an option to donate to any of their choice.  I worked in this project with GraphQL and Front-end, but this project has different dependencies like."
     
         },
+       
+        
         {
             "id": 7,
-            "image": "tech-blog-site.png",
+            "image": "gs://web-portfolio-1bf32.appspot.com/images/tech-blog-site.png",
             "title": "Tech Blog",
             "URL": "https://afternoon-crag-71461.herokuapp.com/login",
             "github": "https://github.com/Fabscg/MVC-challenge-ITblog",
@@ -59,7 +61,7 @@
         },
         {
             "id": 8,
-            "image": "passGenerator.png",
+            "image": "gs://web-portfolio-1bf32.appspot.com/images/passGenerator.png",
             "title": "Password Generator",
             "URL": "https://fabscg.github.io/passgenerator/",
             "github": "https://github.com/Fabscg/passgenerator",
