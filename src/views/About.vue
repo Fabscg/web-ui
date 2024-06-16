@@ -2,9 +2,9 @@
   <div class="about justify-center content-center my-12 my-8">
     <the-navigation></the-navigation>
     <div class="lg:flex block object-center max-w-fit text-white flex bottom-40">
-      <div class="profile w-full text-white p-15">
+      <div class="profile w-full text-white p-15 hidden md:visible">
         <img
-        src="../assets/images/myself.jpeg"
+        src="../assets/images/myself-min.jpeg"
         alt="profile"
         class="myself text-center sm:h-full"
       />

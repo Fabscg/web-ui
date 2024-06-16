@@ -1,6 +1,6 @@
 <template>
   <nav class="w3-sidebar w3-bar-block w3-hide-medium w3-hide-small w3-right align-center bg-black" style="z-index:2" id="mySidebar">
-      <img src="../assets/images/profile.jpeg" alt="profile" class="w3-image" style="width:100%;"/>
+      <img src="../assets/images/profile-min.jpeg" alt="profile" class="w3-image" style="width:100%;"/>
       <div class="grid grid-rows-2">
         <router-link class="item-link w3-bar-item w3-button w3-padding-large w3-hover-black font-mono" to="/">Home
         <font-awesome-icon class="float-right" color="white" :icon="['fas', 'house']" /></router-link>
