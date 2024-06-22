@@ -2,7 +2,7 @@
   <main class="text-center md:h-auto">
     <TheNavigation></TheNavigation>
     <div
-      class="text-white flex items-center text-center font-mono text-xl sm:text-[40px] type-text"
+      class="text-white flex items-center text-center font-mono text-[40px] type-text"
     ><h1 class="sm:py-12">
       <span class="drop-shadow-lg bg-black/30 font-extrabold typed-text font-mono ">{{ typeValue }}</span>
       <span class="blinking-cursor">|</span>

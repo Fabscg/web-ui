@@ -6,7 +6,7 @@
             "title": "Drum Kit",
             "URL": "https://fabscg.github.io/drum-kit/",
             "github": "https://github.com/Fabscg/drum-kit",
-            "description": "This is just a simple page with some keys that can be used from your keyboard to create music..."
+            "description": "This is just a simple page with some keys that can be used from your keyboard to create music. When the user types the given keys,they will hear the sound from the drums as displayed in the page. This is a fun page that I developed in 2020 while studying independently and was one of my first works. Developing this page got me even more interested in coding and more than anything helped me to get into JavaScript. I used HTML, CSS and JavaScript for this project."
         },
         {
             "id": 2,
