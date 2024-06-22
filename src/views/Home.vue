@@ -76,6 +76,7 @@ export default {
 <style>
 .blinking-cursor {
   font-size: 3rem;
+  line-height: 10px;
   color: #d8dee4;
   animation: 1s blink step-end infinite;
 }
