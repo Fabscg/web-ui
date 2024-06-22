@@ -15,7 +15,6 @@
         </div>
         <div class="text-base text-sm text-base-2 backdrop-blur-md blur-sm backdrop-blur-sm bg-gray-500 bg-opacity-50 text-black p-2">
           <p class="p-2">{{ project.description }}</p>
-          <button icon="arrow_down" class="rounded bg-white"></button>
         </div>
       </div>
     </div>
@@ -23,7 +22,7 @@
 </template>
 
 <script>
-import sourceData from 'projects.json';
+import sourceData from '../data.json';
 
 export default {
   data() {
@@ -32,14 +31,13 @@ export default {
     };
   },
   mounted() {
-    fetch('/data/projects.json') // Ensure the path is correct
+    fetch('https://api.github.com/users/fabianingram/repos')
       .then(response => response.json())
       .then(data => {
-        this.projects = data.projects;
-      })
-      .catch(error => console.error('Error fetching data:', error));
+        console.log(data);
+      });
   }
-};
+}
 </script>
 
 <style scoped>
