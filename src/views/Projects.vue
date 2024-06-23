@@ -1,6 +1,6 @@
 <template>
   <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4 px-8 bg-transparent sm:px-12 mb-12">
-    <div v-for="project in projects" :key="project.id" class=" w3-margin-bottom snap-x snap-normal snap-center">
+    <div v-for="project in projects" :key="project.id" class="w3-margin-bottom">
       <a :href="project.URL" target="_blank">
         <img :src="project.imageUrl" :alt="project.title" style="width: 100%" class="image hover:animate-pulse" />
       </a>
