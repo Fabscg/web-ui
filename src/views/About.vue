@@ -1,5 +1,5 @@
 <template>
-  <div class="about sm:pl-[200px] justify-center content-center my-20">
+  <div class="about sm:pl-[200px] justify-center content-center my-20 w-fit">
     <the-navigation></the-navigation>
     <div class="inline-block sm:flex object-center lg:max-w-fit text-white bottom-[20px]">
       <div class="profile w-[400px] text-white p-15">

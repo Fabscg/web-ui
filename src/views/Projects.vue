@@ -13,7 +13,7 @@
             <a :href="project.github" class="fa fa-github fa-2x" target="_blank"></a>
           </div>
         </div>
-        <div class="sm:text-base text-sm text-base-7 backdrop-blur-m">
+        <div class="sm:text-base text-sm text-base-7 backdrop-blur-sm">
           <p class="p-2">{{ project.description }}</p>
         </div>
       </div>

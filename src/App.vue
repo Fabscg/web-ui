@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="">
     <TheNavigation/>
     <div class="py-12 lg:pl-[200px] p-10 text-center">
     <RouterView />
