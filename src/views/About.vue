@@ -2,7 +2,7 @@
   <div class="about py-20 xl:pl-[200px] justify-center content-center">
     <the-navigation></the-navigation>
     <div class="inline-block md:flex object-center lg:max-w-fit text-white">
-      <div class="profile w-[400px] h-[200px]  text-white p-15">
+      <div class="profile w-[400px] h-[200px] text-white p-15">
         <img
         src="../assets/images/myself-min.jpeg"
         alt="profile"
