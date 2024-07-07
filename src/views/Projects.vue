@@ -5,12 +5,12 @@
         <img :src="project.imageUrl" :alt="project.title" style="width: 100%" class="image hover:animate-pulse rounded-md" />
       </a>
       <div class="w3-container bg-black bg-opacity-50 text-white">
-        <div class="wrap flex bg-black p-2 justify-between">
+        <div class="wrap flex bg-black p-2 justify-between items-center">
           <div class="text-left">
             <b>{{ project.title }}</b>
           </div>
-          <div class="justify-end">
-            <a :href="project.github" class="fa fa-github fa-2x" target="_blank"></a>
+          <div class="justify-end p-2 rounded-full hover:bg-gray-500">
+            <a :href="project.github" target="_blank"><i class="fa fa-github fa-2x"></i></a>
           </div>
         </div>
         <div class="sm:text-base text-sm text-base-7 backdrop-blur-sm">
@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       projects: sourceData.projects
-    };
+    }
   },
   mounted() {
     fetch('data.json')
