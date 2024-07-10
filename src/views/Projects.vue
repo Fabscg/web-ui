@@ -1,10 +1,10 @@
 <template>
   <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4 px-8 bg-transparent sm:px-12 mb-12">
-    <div v-for="project in projects" :key="project.id" class="w3-margin-bottom shadow-gray-200 shadow-xl">
+    <div v-for="project in projects" :key="project.id" class="w3-margin-bottom shadow-gray-200 shadow-xl backdrop-blur-sm bg-black bg-opacity-50">
       <a :href="project.URL" target="_blank" class="">
         <img :src="project.imageUrl" :alt="project.title" style="width: 100%" class="image hover:animate-pulse rounded-md" />
       </a>
-      <div class="w3-container bg-black bg-opacity-50 text-white">
+      <div class="w3-container text-white">
         <div class="wrap flex bg-black p-2 justify-between items-center">
           <div class="text-left">
             <b>{{ project.title }}</b>
@@ -13,7 +13,7 @@
             <a :href="project.github" target="_blank"><i class="fa fa-github fa-2x"></i></a>
           </div>
         </div>
-        <div class="sm:text-base text-sm text-base-7 backdrop-blur-sm">
+        <div class="sm:text-base text-sm text-base-7">
           <p class="p-2">{{ project.description }}</p>
         </div>
       </div>
