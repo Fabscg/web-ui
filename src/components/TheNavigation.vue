@@ -31,9 +31,6 @@
       
 </template>
 <script>
-import routes from "../router";
-import { useRoute } from "vue-router";
-import { ref } from "vue";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import Projects from "../views/Projects.vue";
