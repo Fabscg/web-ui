@@ -1,10 +1,10 @@
 <template>
-  <div class="about py-20 xl:pl-[200px] justify-center content-center">
+  <div class="about py-20 xl:px-[200px] justify-center flex content-center">
     <the-navigation></the-navigation>
     <div class="inline-block md:flex object-center lg:max-w-fit text-white">
       <div class="profile w-[400px] h-[200px] text-white p-15">
         <img
-        src="../assets/images/profile-min.jpeg"
+        src="../assets/images/phographer.jpeg"
         alt="profile"
         class="myself text-center object-center"
       />
