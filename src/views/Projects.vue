@@ -29,7 +29,7 @@
 
 <script>
 import sourceData from '../data.json';
-import { onMounted, ref, nextTick } from 'vue';
+import { nextTick } from 'vue';
 
 export default {
   data() {
