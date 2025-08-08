@@ -52,6 +52,7 @@ export default {
 .item-link{
   display:block;
   justify-content: space-evenly!important;
+  font-size: 10px;
 }
 nav {
   list-style-type: none;
@@ -67,9 +68,19 @@ nav {
 .w3-button {
   background-color: transparent;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   padding: 0.5rem 1rem;
   transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 600px) {
+  .w3-button:hover {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000 !important;
+    cursor: pointer;
+  }
 }
 </style>
