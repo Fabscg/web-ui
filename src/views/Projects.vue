@@ -1,8 +1,8 @@
 <template>
   <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4 px-8 bg-transparent sm:px-12 mb-12">
     <div v-for="project in projects" :key="project.id" class="w3-margin-bottom shadow-gray-200 shadow-xl backdrop-blur-sm bg-black bg-opacity-50">
-      <a :href="project.URL" target="_blank" class="">
-        <img :src="project.imageUrl" :alt="project.title" style="width: 100%" class="image hover:animate-pulse rounded-md" />
+      <a :href="project.URL" target="_blank" class="placeholder-glow">
+        <img :src="project.imageUrl" :alt="project.title" style="width: 100%" class="placeholder image hover:animate-pulse rounded-md" />
       </a>
       <div class="w3-container text-white placeholder-glow ">
         <div class="wrap flex bg-black p-2 justify-between items-center">
