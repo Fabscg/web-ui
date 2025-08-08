@@ -4,7 +4,7 @@
       <a :href="project.URL" target="_blank" class="">
         <img :src="project.imageUrl" :alt="project.title" style="width: 100%" class="image hover:animate-pulse rounded-md" />
       </a>
-      <div class="w3-container text-white">
+      <div class="w3-container text-white placeholder-glow ">
         <div class="wrap flex bg-black p-2 justify-between items-center">
           <div class="text-left">
             <b>{{ project.title }}</b>
@@ -13,8 +13,8 @@
             <a :href="project.github" target="_blank"><i class="fa fa-github fa-2x"></i></a>
           </div>
         </div>
-        <div class="sm:text-base text-sm text-base-7">
-          <p class="p-2">{{ project.description }}</p>
+        <div class="sm:text-base text-sm text-base-7 placeholder-glow">
+          <p class="p-2 placeholder">{{ project.description }}</p>
         </div>
       </div>
     </div>
