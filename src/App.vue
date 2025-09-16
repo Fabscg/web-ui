@@ -11,8 +11,7 @@
 </template>
 <script>
 import TheNavigation from '@/components/TheNavigation.vue'
-import { RouterView, RouterLink } from 'vue-router'
-import router from '@/router'
+import { RouterView } from 'vue-router'
 import Footer from '@/components/Footer.vue'
 
 export default {
