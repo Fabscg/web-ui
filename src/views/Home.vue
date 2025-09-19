@@ -1,8 +1,8 @@
 <template>
-  <main class="text-center md:h-auto">
+  <main class="text-center md:h-auto bg-slate-700">
     <TheNavigation></TheNavigation>
     <div
-      class="text-white flex items-center text-center font-mono text-[40px] type-text"
+      class="text-white block items-center text-center font-mono text-[40px] type-text"
     ><h1 class="sm:py-12">
       <span class="drop-shadow-lg bg-black/30 font-extrabold typed-text font-mono ">{{ typeValue }}</span>
       <span class="blinking-cursor">|</span>
@@ -13,7 +13,6 @@
   </main>
 </template>
 <script>
-import { RouterView } from "vue-router";
 export default {
   data: () => {
     return {

@@ -1,18 +1,18 @@
 <template>
   <div class="about py-20 xl:px-[200px] justify-center flex content-center">
     <the-navigation></the-navigation>
-    <div class="inline-block md:flex object-center lg:max-w-fit text-white">
-      <div class="profile w-[400px] h-[200px] text-white p-15">
+    <div class="inline-block relative md:flex object-center lg:max-w-fit text-white">
+      <div class="sm:top-0 sm:sticky profile w-[400px] h-[200px] text-white px-15">
         <img
         src="../assets/images/phographer.jpeg"
         alt="profile"
-        class="myself text-center object-center"
+        class="myself text-center object-center top-80"
       />
       </div>
      
        <div class="container bg-black bg-opacity-50 w-[400px] h-fit justify-center">
-        <h1 class="text-center w3-jumbo font-cursive font-display">I am Fabi</h1>
-          <p class="text-center bg-color-black backdrop-blur-sm px-8 sm:pb-20 font-sans w-[400px] content-center drop-shadow-md">
+        <h1 class="sm:top-0 sm:sticky  text-center w3-jumbo font-cursive font-display">I am Fabi</h1>
+          <p class="text-center bg-color-black backdrop-blur-sm px-8 sm:pb-20 font-sans w-[400px] content-center drop-shadow-md round-full">
             People find me to be an upbeat self-motivated team player with excellent
             communication skills. For the past several years, I have worked in
             customer service and hospitality, and have also spearheaded my own
@@ -38,7 +38,7 @@ export default {
 <style>
 .myself{
   width:400px;
-  height:500px;
+  height:400px;
   object-fit: cover;
   border-radius: 100px 0 0 100px;
 }
@@ -54,7 +54,6 @@ export default {
   border-radius: 0 0 100px 100px;
   }
   .myself{
-  position:fixed;
   padding: 10px auto;
   width:400px;
   height:300px;
