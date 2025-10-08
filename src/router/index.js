@@ -28,6 +28,12 @@ const router = createRouter({
         name: 'Skills',
         icon: 'tools',
         component: () => import('@/views/Skills.vue')
+    },
+    {
+        path: '/contact',
+        name: 'Contact',
+        icon: 'envelope',
+        component: () => import('@/views/Contact.vue')
     }
   ]
 })

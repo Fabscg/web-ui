@@ -8,7 +8,7 @@
         <p class="text-slate-400">
           © Copyrights | Created by 
           <i class="fa fa-terminal" style="color: #71ff49; "></i> Fabiola C.
-          2024
+          2025
         </p>
       </div>
     </div>

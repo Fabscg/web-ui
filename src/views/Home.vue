@@ -1,15 +1,19 @@
 <template>
-  <main class="text-center md:h-auto bg-slate-700">
-    <TheNavigation></TheNavigation>
-    <div
-      class="text-white block items-center text-center font-mono text-[40px] type-text"
-    ><h1 class="sm:py-12">
-      <span class="drop-shadow-lg bg-black/30 font-extrabold typed-text font-mono ">{{ typeValue }}</span>
-      <span class="blinking-cursor">|</span>
-      <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
-    </h1>
-    <RouterView></RouterView>
+  <main class="relative text-center md:h-auto oveflow-hidden">
+  
+    <TheNavigation class="relative"></TheNavigation>
+    <video autoplay muted loop playsinline class="fixed bg-black opacity-25 h-[100%] w-auto top-0 left-0 w-fit object-cover z-2">
+      <source src="/src/assets/images/shapes-in-movement.mp4" type="video/mp4"/>
+    <div class="z-50 text-white flex flex-col items-center justify-center h-[80vh]">
+      <h1 class="text-[40px] sm:py-12 font-mono drop-shadow-lg bg-black/30 font-extrabold rounded-lg p-8">
+        <span class="typed-text">{{ typeValue }}</span>
+        <span class="blinking-cursor">|</span>
+        <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
+      </h1>
+      <RouterView />
     </div>
+  </video>
+  <RouterView></RouterView>
   </main>
 </template>
 <script>
@@ -49,7 +53,7 @@ export default {
         this.charIndex += 1;
         setTimeout(this.typeText, this.typingSpeed);
       } else {
-        this.typeStatus = false;
+        this.typeStatus = true;
         setTimeout(this.eraseText, this.newTextDelay);
       }
     },

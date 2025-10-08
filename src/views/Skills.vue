@@ -1,31 +1,10 @@
 <template>
   <div id="skills" class="skills h-full my-12 z-50 text-center">
-      <!-- <h1
-      class="text-white text-center font-cursive font-display text-[30px] sm:text-[40px] items-center h-[100%] flex justify-center mb-12">
-      Programming Languages
-    </h1>
-    <div class="skills-grid mb-12">
-      <div
-        v-for="icon in icons"
-        :key="icon.label"
-        class="group relative mt-2"
-      >
-        <font-awesome-icon
-          :label="icon.label"
-          :class="['icon-language fa-3x', { 'with-label': showLabel }]"
-          :color="icon.color"
-          :icon="icon.icon"
-        />
-        <span class="tooltip text-white font-mono m-0">
-          {{ icon.label }}
-        </span>
-      </div>
-    </div> -->
     <div class="space-y-6 p-6 bg-slate-800 text-white">
   <!-- Design Tool -->
   <div class="justify-center">
     <h2 class="mb-3 font-semibold">| Design Tool |</h2>
-    <div class="flex gap-2">
+    <div class="flex flex-wrap gap-2">
       <span class="px-3 py-1 rounded-md border border-yellow-400 text-yellow-400 animate-fadeInRight delay-[0ms]">ADOBE CREATIVE SUITE</span>
       <span class="px-3 py-1 rounded-md border border-lime-400 text-lime-400 animate-fadeInRight delay-[200ms]">CSS</span>
       <span class="px-3 py-1 rounded-md border border-sky-400 text-sky-400 animate-fadeInRight delay-[400ms]">FIGMA</span>
@@ -37,7 +16,7 @@
   <!-- Web Technologies -->
   <div>
     <h2 class="mb-3 font-semibold">| Web Technologies |</h2>
-    <div class="flex gap-2 animate-fadeInRight">
+    <div class="flex flex-wrap gap-2 animate-fadeInRight">
       <span class="px-3 py-1 rounded-md border border-cyan-400 text-cyan-400 animate-fadeInRight delay-[0ms]">HTML</span>
       <span class="px-3 py-1 rounded-md border border-lime-400 text-lime-400 animate-fadeInRight delay-[200ms]">CSS</span>
       <span class="px-3 py-1 rounded-md border border-green-400 text-green-400 animate-fadeInRight delay-[400ms]">JAVASCRIPT</span>
@@ -52,7 +31,7 @@
   <!-- Responsive Design -->
   <div>
     <h2 class="mb-3 font-semibold">| Responsive Design |</h2>
-    <div class="flex gap-2">
+    <div class="flex flex-wrap gap-2">
       <span class="px-3 py-1 rounded-md border border-teal-400 text-teal-400 animate-fadeInRight delay-[0ms]">MEDIA QUERIES</span>
       <span class="px-3 py-1 rounded-md border border-pink-400 text-pink-400 animate-fadeInRight delay-[200ms]">BOOTSTRAP</span>
       <span class="px-3 py-1 rounded-md border border-teal-400 text-yellow-400 animate-fadeInRight delay-[400ms]">TAILWIND CSS</span>
@@ -64,7 +43,7 @@
   <!-- Version Control -->
   <div>
     <h2 class="mb-3 font-semibold">| Version Control |</h2>
-    <div class="flex gap-2 animate-fadeInRight">
+    <div class="flex flex-wrap gap-2 animate-fadeInRight">
       <span class="px-3 py-1 rounded-md border border-yellow-400 text-yellow-400 animate-fadeInRight delay-[0ms]">GIT</span>
       <span class="px-3 py-1 rounded-md border border-lime-400 text-lime-400 animate-fadeInRight delay-[200ms]">GITHUB</span>
       <span class="px-3 py-1 rounded-md border border-lime-400 text-cyan-400 animate-fadeInRight delay-[400ms]">GITLAB</span>
@@ -86,25 +65,6 @@ export default {
       type: Boolean,
       default: false,
     },
-  },
-  data() {
-    return {
-      icons: [
-        { label: 'html', color: 'white', icon: ['fab', 'html5'] },
-        { label: 'css', color: 'white', icon: ['fab', 'css3-alt'] },
-        { label: 'javascript', color: 'white', icon: ['fab', 'js'] },
-        { label: 'react', color: 'white', icon: ['fab', 'react'] },
-        { label: 'node', color: 'white', icon: ['fab', 'node'] },
-        { label: 'sass', color: 'white', icon: ['fab', 'sass'] },
-        { label: 'bootstrap', color: 'white', icon: ['fab', 'bootstrap'] },
-        { label: 'database', color: 'white', icon: ['fas', 'database'] },
-        { label: 'git', color: 'white', icon: ['fab', 'git'] },
-        { label: 'github', color: 'white', icon: ['fab', 'github'] },
-        { label: 'gitlab', color: 'white', icon: ['fab', 'gitlab'] },
-        { label: 'npm', color: 'white', icon: ['fab', 'npm'] },
-        { label: 'vue', color: 'white', icon: ['fab', 'vuejs'] },
-      ],
-    };
   },
 };
 </script>
@@ -130,20 +90,6 @@ export default {
   .skills-grid {
     grid-template-columns: repeat(4, 1fr);
   }
-}
-.icon-language {
-  background: linear-gradient(
-    90deg,
-    rgba(131, 58, 180, 1) 0%,
-    rgba(253, 29, 118, 1) 50%,
-    rgba(252, 176, 69, 1) 100%
-  );
-  border: 1px solid white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease-in-out;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 50%;
 }
 .icon-language:hover {
   transform: scale(1.1);
