@@ -1,7 +1,7 @@
 <template>
   <!-- MOBILE SIDEBAR -->
   <nav
-    class="w3-sidebar w3-bar w3-card w3-animate-left bg-cyan-600 fixed top-0 left-0 h-full"
+    class="w3-hide-large w3-sidebar w3-bar w3-card w3-animate-left bg-cyan-600 fixed top-0 left-0 h-full z-[1000] hover:w-[100%]"
     style="width: 250px; z-index: 1000;"
     id="mySidebar"
   >
@@ -15,18 +15,18 @@
       </a>
       <img
         src="/src/assets/images/profile-min.jpeg"
-        class="w3-round-small mx-auto my-4"
+        class="rounded-full mx-auto my-4"
         style="width:45%;"
       >
     </div>
 
-    <div class="">
+    <div class="w3-bar-block">
       <a
         v-for="link in navLinks"
         :key="link.href"
         :href="link.href"
         @click="w3_close"
-        class="drop-shadow-lg w3-bar-item w3-button w3-padding w3-text-white"
+        class="w3-bar-item drop-shadow-lg w3-bar-item w3-button w3-padding w3-text-white"
       >
         <i :class="link.icon + ' w3-margin-right'"></i>{{ link.label }}
       </a>
@@ -44,12 +44,12 @@
   <div class="w3-overlay w3-hide-large" @click="w3_close" id="myOverlay" style="cursor:pointer"></div>
 
   <!-- DESKTOP HEADER -->
-  <header class="w3-top w3-hide-small w3-hide-medium bg-cyan-600 text-white flex items-center justify-between px-6 py-2 shadow-md fixed">
+  <header class="sticky w3-top w3-hide-small w3-hide-medium bg-cyan-600 text-white flex items-center justify-between px-6 py-2 shadow-md fixed z-[500]">
     <!-- Logo / Title -->
     <h1 class="font-bold text-lg">Web UI</h1>
 
     <!-- Navigation -->
-    <div class="nav nav-tabs flex space-x-6 text-sm md:text-base">
+    <div class="nav nav-tabs flex space-x-6 text-sm md:text-base ">
       <a
         v-for="link in navLinks"
         :key="link.href"
@@ -81,18 +81,6 @@
     <span class="absolute top-6 left-6 w3-hide-large cursor-pointer z-50" @click="w3_open">
       <i class="fa fa-bars fa-2x text-white"></i>
     </span>
-
-    <!-- Example bottom bar -->
-    <div class="w3-container mt-6">
-      <div class="w3-bottombar flex justify-end space-x-2">
-        <button class="w3-button w3-white w3-hide-small">
-          <i class="fa fa-photo w3-margin-right"></i> Photos
-        </button>
-        <a class="w3-button w3-white w3-hide-small">
-          <i class="fa fa-map-pin w3-margin-right"></i> Location
-        </a>
-      </div>
-    </div>
   </main>
 </template>
 
@@ -112,6 +100,9 @@ const socials = [
   { href: "https://www.linkedin.com/in/fabicastaneda-software-engineer/", icon: "fa fa-linkedin" },
   { href: "https://github.com/Fabscg", icon: "fa fa-github" }
 ]
+const showPhotos = () => {
+  window.location.href = "/home"
+}
 
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block"
@@ -144,12 +135,7 @@ background: radial-gradient(circle, rgba(40, 59, 94, 1) 0%, rgba(9, 68, 180, 1) 
 }
 @media screen and (max-width: 600px) {
   .w3-button:hover {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000 !important;
-    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
   }
   nav {
   list-style-type: none;

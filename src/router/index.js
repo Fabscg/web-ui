@@ -5,9 +5,8 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: 'home',
-      linkActiveClass: 'active',
       icon: 'house',
       component: Home
     },
@@ -19,23 +18,24 @@ const router = createRouter({
     },
     {
         path: '/projects',
-        name: 'Projects',
+        name: 'projects',
         icon: 'briefcase',
         component: () => import('@/views/Projects.vue')
     },
     {
         path: '/skills',
-        name: 'Skills',
+        name: 'skills',
         icon: 'tools',
         component: () => import('@/views/Skills.vue')
     },
     {
         path: '/contact',
-        name: 'Contact',
+        name: 'contact',
         icon: 'envelope',
         component: () => import('@/views/Contact.vue')
     }
-  ]
+  ],
+  linkActiveClass: 'active',
 })
 
 export default router

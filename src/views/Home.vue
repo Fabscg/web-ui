@@ -1,25 +1,77 @@
 <template>
-  <main class="relative text-center md:h-auto oveflow-hidden">
-  
-    <TheNavigation class="relative"></TheNavigation>
-    <video autoplay muted loop playsinline class="fixed bg-black opacity-25 h-[100%] w-auto top-0 left-0 w-fit object-cover z-2">
-      <source src="/src/assets/images/shapes-in-movement.mp4" type="video/mp4"/>
-    <div class="z-50 text-white flex flex-col items-center justify-center h-[80vh]">
-      <h1 class="text-[40px] sm:py-12 font-mono drop-shadow-lg bg-black/30 font-extrabold rounded-lg p-8">
-        <span class="typed-text">{{ typeValue }}</span>
+  <main class="text-center h-screen overflow-hidden">
+    <!-- Background image -->
+    <img
+      src="/src/assets/images/computerScreen.jpg"
+      alt="laptop"
+      class="fixed top-0 left-0 lg:w-full w-fit lg:h-auto h-full object-cover opacity-50"
+    />
+
+    <!-- Overlay text area -->
+      <h1
+        class="text-[40px] sm:py-12 font-mono drop-shadow-lg bg-black/30 font-extrabold rounded-lg p-8"
+      >
+        <span class="typed-text text-white">{{ typeValue }}</span>
         <span class="blinking-cursor">|</span>
-        <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
       </h1>
-      <RouterView />
+
+      <!-- Button to open Photos modal -->
+      <div
+      class="absolute z-10 flex flex-col items-center justify-center h-fit"
+    >
+      <button
+        @click="showModal = true"
+        class="mt-6 bg-slate-400 text-white px-6 py-2 rounded-lg hover:bg-slate-700 transition"
+      >
+        View Photos
+      </button>
     </div>
-  </video>
-  <RouterView></RouterView>
+
+    <!-- Lightbox Modal -->
+    <transition name="fade">
+      <div
+        v-if="showModal"
+        class="fixed inset-0 flex items-center justify-center bg-black/70 backdrop-blur-sm z-[999]"
+      >
+        <div
+          class="relative bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl w-11/12 md:w-3/4 lg:w-2/3 max-h-[90vh] overflow-y-auto p-6 border border-white/20"
+        >
+          <button
+            @click="showModal = false"
+            class="absolute top-3 right-3 text-white text-3xl font-bold hover:text-red-400 transition"
+          >
+            ✕
+          </button>
+          <Photos :photos="photos" />
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 justify-items-center p-4"
+          >
+            <div
+              v-for="photo in photos"
+              :key="photo.id"
+              class="bg-white/20 rounded-xl overflow-hidden transform hover:scale-105 transition duration-300 shadow-md"
+            >
+              <img
+                :src="photo.src"
+                :alt="photo.alt"
+                class="w-full h-48 object-cover"
+              />
+              <p class="text-white text-sm mt-2 mb-2">{{ photo.alt }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </transition>
   </main>
 </template>
+
 <script>
+import Photos from "../views/Photos.vue";
 export default {
-  data: () => {
+  components: { Photos },
+  data() {
     return {
+      showModal: false,
       typeValue: "",
       typeStatus: false,
       displayTextArray: [
@@ -27,69 +79,77 @@ export default {
         "Developer",
         "Coding Enthusiast",
         "Designer",
-        "Freelancer"
+        "Freelancer",
       ],
       typingSpeed: 100,
       erasingSpeed: 100,
       newTextDelay: 2000,
       displayTextArrayIndex: 0,
-      charIndex: 0
+      charIndex: 0,
+      photos: [
+        { id: 1, src: "/src/assets/images/Toronto.jpeg", alt: "Toronto" },
+        { id: 2, src: "/src/assets/images/cardinal.jpeg", alt: "Cardinal" },
+        { id: 3, src: "/src/assets/images/wasp.jpeg", alt: "Wasp" },
+        { id: 4, src: "/src/assets/images/Woodpecker.jpeg", alt: "Woodpecker" },
+        { id: 5, src: "/src/assets/images/sunset.jpeg", alt: "Sunset" },
+        { id: 6, src: "/src/assets/images/autum.jpeg", alt: "Autumn" },
+        { id: 7, src: "/src/assets/images/shapeOfTrees.jpeg", alt: "Pink Sky" },
+        { id: 8, src: "/src/assets/images/fullMoon.jpeg", alt: "Full Moon" },
+        { id: 9, src: "/src/assets/images/eagle.jpeg", alt: "Eagle" },
+        { id: 10, src: "/src/assets/images/dryLeaves.jpg", alt: "Dry Leaves" },
+        { id: 11, src: "/src/assets/images/cnTower.jpeg", alt: "CN Tower" },
+        { id: 12, src: "/src/assets/images/Cemetery.jpeg", alt: "Cemetery" },
+      ],
     };
   },
-  props: {},
   created() {
     setTimeout(this.typeText, this.newTextDelay + 200);
   },
   methods: {
     typeText() {
-      if (
-        this.charIndex <
-        this.displayTextArray[this.displayTextArrayIndex].length
-      ) {
-        if (!this.typeStatus) this.typeStatus = true;
-        this.typeValue += this.displayTextArray[
-          this.displayTextArrayIndex
-        ].charAt(this.charIndex);
-        this.charIndex += 1;
+      const currentText = this.displayTextArray[this.displayTextArrayIndex];
+      if (this.charIndex < currentText.length) {
+        this.typeValue += currentText.charAt(this.charIndex++);
         setTimeout(this.typeText, this.typingSpeed);
       } else {
-        this.typeStatus = true;
         setTimeout(this.eraseText, this.newTextDelay);
       }
     },
     eraseText() {
       if (this.charIndex > 0) {
-        if (!this.typeStatus) this.typeStatus = true;
         this.typeValue = this.displayTextArray[
           this.displayTextArrayIndex
         ].substring(0, this.charIndex - 1);
-        this.charIndex -= 1;
+        this.charIndex--;
         setTimeout(this.eraseText, this.erasingSpeed);
       } else {
-        this.typeStatus = false;
-        this.displayTextArrayIndex += 1;
-        if (this.displayTextArrayIndex >= this.displayTextArray.length)
-          this.displayTextArrayIndex = 0;
+        this.displayTextArrayIndex =
+          (this.displayTextArrayIndex + 1) % this.displayTextArray.length;
         setTimeout(this.typeText, this.typingSpeed + 1000);
       }
-    }
-  }
+    },
+  },
 };
 </script>
+
 <style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 .blinking-cursor {
-  font-size: 3rem;
-  line-height: 10px;
-  color: #d8dee4;
-  animation: 1s blink step-end infinite;
+  font-size: 2rem;
+  color: #71ff49;
+  animation: blink 1s step-end infinite;
 }
 @keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
   50% {
-    color: #71ff49;
+    opacity: 0;
   }
 }
 </style>
