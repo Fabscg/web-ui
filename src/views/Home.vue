@@ -9,7 +9,7 @@
 
     <!-- Overlay text area -->
       <h1
-        class="text-[40px] sm:py-12 font-mono drop-shadow-lg bg-black/30 font-extrabold rounded-lg p-8"
+        class="text-[20px] sm:text-[40px] sm:py-12 font-mono drop-shadow-lg bg-black/30 font-extrabold rounded-lg p-8"
       >
         <span class="typed-text text-white">{{ typeValue }}</span>
         <span class="blinking-cursor">|</span>
@@ -19,12 +19,12 @@
       <div
       class="absolute z-10 flex flex-col items-center justify-center h-fit"
     >
-      <button
+      <!-- <button
         @click="showModal = true"
         class="mt-6 bg-slate-400 text-white px-6 py-2 rounded-lg hover:bg-slate-700 transition"
       >
         View Photos
-      </button>
+      </button> -->
     </div>
 
     <!-- Lightbox Modal -->
@@ -66,11 +66,11 @@
 </template>
 
 <script>
-import Photos from "../views/Photos.vue";
+import Photos from "@/views/Photos.vue";
 export default {
-  components: { Photos },
   data() {
     return {
+      Photos,
       showModal: false,
       typeValue: "",
       typeStatus: false,
@@ -87,20 +87,18 @@ export default {
       displayTextArrayIndex: 0,
       charIndex: 0,
       photos: [
-        { id: 1, src: "gs://web-portfolio-1bf32.appspot.com/images/Toronto.jpeg", alt: "Toronto" },
-        { id: 2, src: "gs://web-portfolio-1bf32.appspot.com/images/cardinal.jpeg", alt: "Cardinal" },
-        { id: 3, src: "gs://web-portfolio-1bf32.appspot.com/images/wasp.jpeg", alt: "Wasp" },
-        { id: 4, src: "gs://web-portfolio-1bf32.appspot.com/images/Woodpecker.jpeg", alt: "Woodpecker" },
-        { id: 5, src: "gs://web-portfolio-1bf32.appspot.com/images/sunset.jpeg", alt: "Sunset" },
-        { id: 6, src: "gs://web-portfolio-1bf32.appspot.com/images/autum.jpeg", alt: "Autumn" },
-        { id: 7, src: "gs://web-portfolio-1bf32.appspot.com/images/shapeOfTrees.jpeg", alt: "Pink Sky" },
-        { id: 8, src: "gs://web-portfolio-1bf32.appspot.com/images/fullMoon.jpeg", alt: "Full Moon" },
-        { id: 9, src: "gs://web-portfolio-1bf32.appspot.com/images/eagle.jpeg", alt: "Eagle" },
-        { id: 10, src: "gs://web-portfolio-1bf32.appspot.com/images/dryLeaves.jpg", alt: "Dry Leaves" },
-        { id: 11, src: "gs://web-portfolio-1bf32.appspot.com/images/cntower.jpeg", alt: "CN Tower" },
-        { id: 12, src: "gs://web-portfolio-1bf32.appspot.com/images/Cemetery.jpeg", alt: "Cemetery" },
-        { id: 13, src: "gs://web-portfolio-1bf32.appspot.com/images/chickadee.jpeg", alt: "Chickadee" },
-       
+        { id: 1, src: "/src/assets/images/Toronto.jpeg", alt: "Toronto" },
+        { id: 2, src: "/src/assets/images/cardinal.jpeg", alt: "Cardinal" },
+        { id: 3, src: "/src/assets/images/wasp.jpeg", alt: "Wasp" },
+        { id: 4, src: "/src/assets/images/Woodpecker.jpeg", alt: "Woodpecker" },
+        { id: 5, src: "/src/assets/images/sunset.jpeg", alt: "Sunset" },
+        { id: 6, src: "/src/assets/images/autum.jpeg", alt: "Autumn" },
+        { id: 7, src: "/src/assets/images/shapeOfTrees.jpeg", alt: "Pink Sky" },
+        { id: 8, src: "/src/assets/images/fullMoon.jpeg", alt: "Full Moon" },
+        { id: 9, src: "/src/assets/images/eagle.jpeg", alt: "Eagle" },
+        { id: 10, src: "/src/assets/images/dryLeaves.jpg", alt: "Dry Leaves" },
+        { id: 11, src: "/src/assets/images/cnTower.jpeg", alt: "CN Tower" },
+        { id: 12, src: "/src/assets/images/Cemetery.jpeg", alt: "Cemetery" },
       ],
     };
   },
