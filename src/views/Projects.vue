@@ -17,16 +17,16 @@
           <img
             :src="project.imageUrl"
             :alt="project.title"
-            class="d-block w-100 rounded shadow-lg"
+            class="md:min-w-[900px] md:w-fit object-cover rounded shadow-lg"
           />
         </a>
 
-        <div class="carousel-caption rounded bg-black bg-opacity-75 backdrop-blur-md p-4">
+        <div class="carousel-caption bg-black bg-opacity-75 backdrop-blur-md p-4">
           <h5 class="font-mono text-xl text-white pb-2">{{ project.title }}</h5>
           <a :href="project.github" target="_blank" class="btn btn-light btn-sm rounded-full">
             <i class="fa fa-github fa-lg"></i>
           </a>
-          <p class="font-mono text-white mt-3 text-sm sm:text-base">{{ project.description }}</p>
+          <p class="w3-hide-small w3-hide-medium font-mono text-white mt-3 text-sm leading-6 sm:text-base ">{{ project.description }}</p>
         </div>
       </div>
     </div>
@@ -92,5 +92,13 @@ export default {
 .carousel-fade .active.carousel-item-end {
   opacity: 0;
   z-index: 0;
+}
+@media screen and (max-width: 6078px) {
+  .carousel-inner {
+    min-width: 100% !important;
+    font-size: 0.8rem;
+    padding: 0;
+  }
+  
 }
 </style>
