@@ -7,27 +7,25 @@
       class="fixed top-0 left-0 lg:w-full w-fit lg:h-auto h-full object-cover opacity-50"
     />
 
-    <!-- Overlay text area -->
-      <h1
-        class="text-[20px] sm:text-[40px] sm:py-12 font-mono drop-shadow-lg bg-black/30 font-extrabold rounded-lg p-8"
-      >
-        <span class="typed-text text-white">{{ typeValue }}</span>
-        <span class="blinking-cursor">|</span>
-      </h1>
-
-      <!-- Button to open Photos modal -->
-      <div
-      class="absolute z-10 flex flex-col items-center justify-center h-fit"
+    <!-- Overlay text -->
+    <h1
+      class="text-[20px] sm:text-[40px] sm:py-12 font-mono drop-shadow-lg bg-black/30 font-extrabold rounded-lg p-8"
     >
-      <!-- <button
+      <span class="typed-text text-white">{{ typeValue }}</span>
+      <span class="blinking-cursor">|</span>
+    </h1>
+
+    <!-- Button -->
+    <div class="absolute z-10 flex flex-col items-center justify-center h-fit">
+      <button
         @click="showModal = true"
         class="mt-6 bg-slate-400 text-white px-6 py-2 rounded-lg hover:bg-slate-700 transition"
       >
         View Photos
-      </button> -->
+      </button>
     </div>
 
-    <!-- Lightbox Modal -->
+    <!-- Photos Modal -->
     <transition name="fade">
       <div
         v-if="showModal"
@@ -36,20 +34,23 @@
         <div
           class="relative bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl w-11/12 md:w-3/4 lg:w-2/3 max-h-[90vh] overflow-y-auto p-6 border border-white/20"
         >
+          <!-- Close button -->
           <button
             @click="showModal = false"
             class="absolute top-3 right-3 text-white text-3xl font-bold hover:text-red-400 transition"
           >
             ✕
           </button>
-          <Photos :photos="photos" />
+
+          <!-- Grid of photos -->
           <div
             class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 justify-items-center p-4"
           >
             <div
               v-for="photo in photos"
               :key="photo.id"
-              class="bg-white/20 rounded-xl overflow-hidden transform hover:scale-105 transition duration-300 shadow-md"
+              class="bg-white/20 rounded-xl overflow-hidden transform hover:scale-105 transition duration-300 shadow-md cursor-pointer"
+              @click="enlargePhoto(photo)"
             >
               <img
                 :src="photo.src"
@@ -62,16 +63,36 @@
         </div>
       </div>
     </transition>
+
+    <!-- Enlarged photo overlay -->
+    <transition name="fade">
+      <div
+        v-if="enlargedPhoto"
+        class="fixed inset-0 bg-black/80 flex items-center justify-center z-[1000]"
+        @click="closeEnlargedPhoto"
+      >
+        <transition name="scale">
+          <img
+            v-if="enlargedPhoto"
+            :src="enlargedPhoto.src"
+            :alt="enlargedPhoto.alt"
+            class="max-w-[90vw] max-h-[85vh] rounded-xl shadow-2xl border border-white/20 object-contain"
+          />
+        </transition>
+      </div>
+    </transition>
   </main>
 </template>
 
 <script>
 import Photos from "@/views/Photos.vue";
+
 export default {
   data() {
     return {
       Photos,
       showModal: false,
+      enlargedPhoto: null,
       typeValue: "",
       typeStatus: false,
       displayTextArray: [
@@ -128,20 +149,40 @@ export default {
         setTimeout(this.typeText, this.typingSpeed + 1000);
       }
     },
+    enlargePhoto(photo) {
+      this.enlargedPhoto = photo;
+    },
+    closeEnlargedPhoto() {
+      this.enlargedPhoto = null;
+    },
   },
 };
 </script>
 
 <style>
+/* Fade transition */
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s ease;
+  transition: opacity 0.4s ease;
 }
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
 }
 
+/* Scale transition for zoom */
+.scale-enter-active,
+.scale-leave-active {
+  transition: transform 0.3s ease;
+}
+.scale-enter-from {
+  transform: scale(0.8);
+}
+.scale-leave-to {
+  transform: scale(0.8);
+}
+
+/* Typing cursor */
 .blinking-cursor {
   font-size: 2rem;
   color: #71ff49;

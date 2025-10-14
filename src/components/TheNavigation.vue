@@ -1,7 +1,7 @@
 <template>
   <!-- MOBILE SIDEBAR -->
   <nav
-    class="w3-hide-large w3-sidebar w3-bar w3-card w3-animate-left bg-cyan-600 fixed top-0 left-0 h-full z-[1000] hover:w-[100%]"
+    class="sm:w3-collapse w3-sidebar w3-bar w3-card w3-animate-left bg-cyan-600 fixed top-0 left-0 h-full z-[1000] hover:w-[100%]"
     style="width: 250px; z-index: 1000;"
     id="mySidebar"
   >
@@ -44,7 +44,7 @@
   <div class="w3-overlay w3-hide-large" @click="w3_close" id="myOverlay" style="cursor:pointer"></div>
 
   <!-- DESKTOP HEADER -->
-  <header class="sticky w3-top w3-hide-small w3-hide-medium bg-cyan-600 text-white flex items-center justify-between px-6 py-2 shadow-md fixed z-[500]">
+  <header class="static w3-top w3-hide-small w3-hide-medium bg-cyan-600 text-white flex items-center justify-between px-6 py-2 shadow-md fixed z-[500]">
     <!-- Logo / Title -->
     <h1 class="font-bold text-lg">Web UI</h1>
 
