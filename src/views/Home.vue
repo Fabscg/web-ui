@@ -108,7 +108,7 @@ export default {
       displayTextArrayIndex: 0,
       charIndex: 0,
       photos: [
-        { id: 1, src: "/src/assets/images/Toronto.jpeg", alt: "Toronto" },
+        { id: 1, src: "https://firebasestorage.googleapis.com/v0/b/web-portfolio-1bf32.appspot.com/o/images%2FToronto.jpeg?alt=media&token=d0ccba1c-1e56-4670-9a9d-97bd38050cf6", alt: "Toronto" },
         { id: 2, src: "/src/assets/images/cardinal.jpeg", alt: "Cardinal" },
         { id: 3, src: "/src/assets/images/wasp.jpeg", alt: "Wasp" },
         { id: 4, src: "/src/assets/images/Woodpecker.jpeg", alt: "Woodpecker" },
@@ -116,7 +116,7 @@ export default {
         { id: 6, src: "/src/assets/images/autum.jpeg", alt: "Autumn" },
         { id: 7, src: "/src/assets/images/shapeOfTrees.jpeg", alt: "Pink Sky" },
         { id: 8, src: "/src/assets/images/fullMoon.jpeg", alt: "Full Moon" },
-        { id: 9, src: "/src/assets/images/eagle.jpeg", alt: "Eagle" },
+        { id: 9, src: "/src/assets/images/eagle.jpeg", alt: "Sharp-Shinned Hawk" },
         { id: 10, src: "/src/assets/images/dryLeaves.jpg", alt: "Dry Leaves" },
         { id: 11, src: "/src/assets/images/cnTower.jpeg", alt: "CN Tower" },
         { id: 12, src: "/src/assets/images/Cemetery.jpeg", alt: "Cemetery" },
