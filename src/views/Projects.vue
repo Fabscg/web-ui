@@ -35,7 +35,7 @@
           </a>
 
           <p
-            class="hidden sm:visible sm:block font-mono text-white mt-3 text-sm sm:text-base leading-6"
+            class="hidden lg:visible sm:block font-mono text-white mt-3 text-sm sm:text-base leading-6"
           >
             {{ project.description }}
           </p>
