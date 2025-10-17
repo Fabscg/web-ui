@@ -5,7 +5,7 @@
     data-bs-ride="carousel"
     data-bs-interval="4000"
   >
-    <div class="carousel-inner pt-4 sm:p-[50px] xl:p-[200px] p-18">
+    <div class="carousel-inner px-2 sm:px-[50px] xl:px-[200px]">
 
       <!-- Loop through projects -->
       <div
@@ -17,16 +17,28 @@
           <img
             :src="project.imageUrl"
             :alt="project.title"
-            class="md:min-w-[900px] md:w-fit object-cover rounded shadow-lg"
+            class="w-full h-auto max-h-[70vh] object-contain rounded-xl shadow-lg mx-auto"
           />
         </a>
 
-        <div class="carousel-caption bg-black bg-opacity-75 backdrop-blur-md p-4">
-          <h5 class="font-mono text-xl text-white pb-2">{{ project.title }}</h5>
-          <a :href="project.github" target="_blank" class="btn btn-light btn-sm rounded-full">
+        <div class="carousel-caption bg-black/70 backdrop-blur-md p-3 rounded-lg">
+          <h5 class="font-mono text-lg sm:text-xl text-white pb-2">
+            {{ project.title }}
+          </h5>
+
+          <a
+            :href="project.github"
+            target="_blank"
+            class="btn btn-light btn-sm rounded-full"
+          >
             <i class="fa fa-github fa-lg"></i>
           </a>
-          <p class="w3-hide-small w3-hide-medium font-mono text-white mt-3 text-sm leading-6 sm:text-base ">{{ project.description }}</p>
+
+          <p
+            class="hidden lg:visible sm:block font-mono text-white mt-3 text-sm sm:text-base leading-6"
+          >
+            {{ project.description }}
+          </p>
         </div>
       </div>
     </div>
@@ -74,10 +86,10 @@ export default {
 </script>
 
 <style scoped>
-/* Smooth fade override */
+/* Smooth fade transition */
 .carousel-fade .carousel-item {
   opacity: 0;
-  transition: opacity 1s ease-in-out; /* adjust duration as needed */
+  transition: opacity 1s ease-in-out;
 }
 
 .carousel-fade .carousel-item.active,
@@ -87,18 +99,35 @@ export default {
   z-index: 1;
 }
 
-/* prevent jump between slides */
 .carousel-fade .active.carousel-item-start,
 .carousel-fade .active.carousel-item-end {
   opacity: 0;
   z-index: 0;
 }
-@media screen and (max-width: 6078px) {
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
   .carousel-inner {
-    min-width: 100% !important;
-    font-size: 0.8rem;
-    padding: 0;
+    padding: 0 !important;
   }
-  
+
+  .carousel-caption {
+    bottom: 5%;
+    padding: 0.75rem;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+
+  img {
+    max-height: 60vh;
+    object-fit: contain;
+  }
 }
 </style>

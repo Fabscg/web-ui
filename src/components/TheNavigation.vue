@@ -1,7 +1,8 @@
 <template>
   <!-- MOBILE SIDEBAR -->
   <nav
-    class="sm:w3-collapse w3-sidebar w3-bar w3-card w3-animate-left bg-cyan-600 fixed top-0 left-0 h-full z-[1000] hover:w-[100%]"
+  v-if="!sidebarOpen && !isLargeScreen"
+    class="w3-collapse-large w3-sidebar w3-bar w3-card w3-animate-left bg-cyan-600 fixed top-0 left-0 h-full z-[1000] hover:w-[100%]"
     style="width: 250px; z-index: 1000;"
     id="mySidebar"
   >
@@ -85,6 +86,7 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
 const navLinks = [
   { href: "/home", label: "HOME", icon: "fa fa-home" },
   { href: "/about", label: "ABOUT", icon: "fa fa-user" },
@@ -100,10 +102,19 @@ const socials = [
   { href: "https://www.linkedin.com/in/fabicastaneda-software-engineer/", icon: "fa fa-linkedin" },
   { href: "https://github.com/Fabscg", icon: "fa fa-github" }
 ]
-const showPhotos = () => {
-  window.location.href = "/home"
+const isLargeScreen = ref(window.innerWidth >= 1024)
+const handleResize = () => {
+  isLargeScreen.value = window.innerWidth >= 1024
 }
+const sidebarOpen = ref(false)
 
+onMounted(() => {
+  window.addEventListener('resize', handleResize)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', handleResize)
+})
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block"
   document.getElementById("myOverlay").style.display = "block"
