@@ -44,12 +44,12 @@
 
           <!-- Grid of photos -->
           <div
-            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 justify-items-center p-4"
+            class="placeholder grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 justify-items-center p-4"
           >
             <div
               v-for="photo in photos"
               :key="photo.id"
-              class="bg-white/20 rounded-xl overflow-hidden transform hover:scale-105 transition duration-300 shadow-md cursor-pointer"
+              class="placeholder-glow bg-white/20 rounded-xl overflow-hidden transform hover:scale-105 transition duration-300 shadow-md cursor-pointer"
               @click="enlargePhoto(photo)"
             >
               <img
@@ -120,6 +120,10 @@ export default {
         { id: 10, src: "https://firebasestorage.googleapis.com/v0/b/web-portfolio-1bf32.appspot.com/o/images%2FdryLeaves.jpg?alt=media&token=30e62692-1185-4eac-b53e-6d9079df4dff", alt: "Dry Leaves" },
         { id: 11, src: "https://firebasestorage.googleapis.com/v0/b/web-portfolio-1bf32.appspot.com/o/images%2Fcntower.jpeg?alt=media&token=8f6a326c-2369-4e98-9ee5-f36655a4faea", alt: "CN Tower" },
         { id: 12, src: "https://firebasestorage.googleapis.com/v0/b/web-portfolio-1bf32.appspot.com/o/images%2FCemetery.jpeg?alt=media&token=def8f9b5-1977-4afa-8da7-c53231a7ee5b", alt: "Cemetery" },
+        { id: 13, src: "https://firebasestorage.googleapis.com/v0/b/web-portfolio-1bf32.appspot.com/o/images%2Fchickadee.jpeg?alt=media&token=6828ef3b-2caf-4b6b-bf4f-6f0dcae2c97f", alt: "Chickadee"},
+        { id: 14, src: "https://firebasestorage.googleapis.com/v0/b/web-portfolio-1bf32.appspot.com/o/images%2Fkitesurfers.jpeg?alt=media&token=27921390-03c7-4689-a84e-a56d489f7e2c", alt: "kiteboarding"},
+        { id: 15, src: "https://firebasestorage.googleapis.com/v0/b/web-portfolio-1bf32.appspot.com/o/images%2Fbike%26city.jpg?alt=media&token=1ae93372-3931-44c0-9cdc-39fc8bd8602f", alt: "City Cycling"},
+        { id: 16, src: "https://firebasestorage.googleapis.com/v0/b/web-portfolio-1bf32.appspot.com/o/images%2FBluejay.jpeg?alt=media&token=5f42a910-aff0-472d-9b76-36d58a143c75", alt: "Bluejay"}
       ],
     };
   },
