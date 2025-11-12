@@ -2,7 +2,7 @@
   <!-- MOBILE SIDEBAR -->
   <nav
   v-if="!sidebarOpen && !isLargeScreen"
-    class="w3-collapse-large w3-sidebar w3-bar w3-card w3-animate-left bg-cyan-600 fixed top-0 left-0 h-full z-[1000] hover:w-[100%]"
+    class="w3-collapse w3-sidebar w3-bar w3-card w3-animate-left bg-cyan-600 fixed top-0 left-0 h-full z-[1000] hover:w-[100%]"
     style="width: 250px; z-index: 1000;"
     id="mySidebar"
   >
